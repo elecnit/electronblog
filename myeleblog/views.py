@@ -8,6 +8,8 @@ from django.http  import HttpResponseRedirect
 #def home(request):
  #   return render(request, 'home.html')
 
+def Test(request):
+  return render(request,"thing.html", {"color":"red"})
 
 def LikeView(request , pk):
   post = get_object_or_404(Post,id=request.POST.get('post_id'))
